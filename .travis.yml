@@ -1,0 +1,18 @@
+language: python
+python:
+- '3.3'
+- '3.4'
+- '3.5'
+install:
+- python setup.py -q install
+script:
+- nosetests
+deploy:
+  provider: pypi
+  user: Gohla
+  password:
+    secure: ErvJfACbUOXtnEIlIE74wnS4I5gpicu4wrKZmoZd1pAF3Wpk1qSrvAqnT2uMqWYxD0Ux4xdDa5uLJQG33r/kYkorxQ9zNtb63te+1OVrTw0Ycf1gKf2YEspluakAU8vr1c+OUx1CYbOonksrBn+iRchd7IXyfx9PTq8fPnfQDGtwbmUbZ2Tj97ED529WRJ4KARnJO3Lwn8EJb9/Qzyyc7zJ4+A4taaLZf+rv5DUTeoCagLtgeTektodvBCKJYbnWuRh0vwml7bHHPyRFp9hdC3TNCgZSnrdqTym1abC4epRrPNjEX/YDIP7hNAeUTjWDQTHbzQz6WDtik+lEFhxbAqORWdY7UKMm/gq4r59seqz9xnl+qhclMB3UohRg6Ez/4xbSCa7zhA0t5Oouw8qT+JqJ+9za/AzkHTuO9TmDhdIm6fx6hbmQaCoVDIW1JZ0b2z//calZKaEK6Qbcwmn5WMvLMiI56Upp6LOAjocM6dPyk1UVPB8q7UzgfSyrOdNHiiMRoFjPmGEcp4hhm4QZHC82Ex126YGO1lFxnumWrulU1/1hhhZprdRZxfTIH2LZLl4aq0+OaZ5Men0RMR5dlAUS2N8cL0XgqC2mR3nacRNqowz4pzeNfoDhATxJEBfxcUnzsIh0z/398fwTTs96ivIE7YwfLT8sTYhb7YHL/Ic=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: Gohla/eclipsegen_cli
