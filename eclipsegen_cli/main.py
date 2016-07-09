@@ -1,8 +1,13 @@
+import sys
+
 from eclipsegen_cli.cmd import EclipseGeneratorCLI
 
 
-def main():
+def main(*argv, exitAfter=True):
   try:
-    EclipseGeneratorCLI.run()
+    if not argv:
+      argv = sys.argv
+    _, ret = EclipseGeneratorCLI.run(argv=argv, exit=exitAfter)
+    return ret
   except KeyboardInterrupt as ex:
     print(ex)
