@@ -9,7 +9,6 @@ from eclipsegen.preset import Presets
 
 class EclipseGeneratorCLI(cli.Application):
   PROGNAME = 'eclipsegen'
-  VERSION = '0.1.0'
 
   def main(self):
     if not self.nested_command:
